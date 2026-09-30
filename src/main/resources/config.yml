@@ -1,0 +1,13 @@
+database:
+  host: localhost
+  port: 3306
+  database: minecraft
+  username: root
+  password: change-me
+  use-ssl: true
+land:
+  nation-uuid: 8dc02cca-ee6d-44f0-bccf-533bb53c63f7
+  min-y: 0
+  max-y: 319
+shop:
+  chat-timeout-seconds: 60

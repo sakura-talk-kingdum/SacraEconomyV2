@@ -1,0 +1,15 @@
+shop:
+  prefix: "&e[Shop] &r"
+  forbidden-item: "&cエンチャント、NBTタグ、または使用感のあるアイテムは売買できません。"
+  sell-success: "&a%item% を %amount%個、%price%円で出品しました。"
+  buy-success: "&a%item% を %amount%個、%price%円で購入しました。"
+  not-enough-money: "&c所持金が足りません。"
+  inventory-full: "&c購入する数量をインベントリに収容できません。"
+  unavailable: "&cその出品はすでに購入されています。"
+  invalid-price: "&c価格は0より大きい数字で入力してください。"
+  price-timeout: "&c価格入力がタイムアウトしました。"
+  transaction-failed: "&c取引に失敗しました。"
+land:
+  overlap: "&cその範囲は既存の保護エリアと重複しています。"
+  purchased: "&a土地を購入しました。"
+  no-permission: "&c権限がありません。"

@@ -1,0 +1,15 @@
+name: SacraEconomyV2
+version: 2.0.0
+main: si.f5.sakura_tk.sacra.economyv2.SacraEconomyV2
+api-version: '1.21'
+depend: [Vault]
+commands:
+  shop:
+    description: SacraEconomy shop
+    usage: /shop <buy>
+  tochi:
+    description: SacraEconomy land protection
+    usage: /tochi <buy>
+permissions:
+  sacraeconomy.admin:
+    default: op
