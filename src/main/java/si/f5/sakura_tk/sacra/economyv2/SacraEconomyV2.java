@@ -3,6 +3,7 @@ package si.f5.sakura_tk.sacra.economyv2;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
+import java.sql.SQLException;
 import si.f5.sakura_tk.sacra.economyv2.command.ShopCommand;
 import si.f5.sakura_tk.sacra.economyv2.command.TochiCommand;
 import si.f5.sakura_tk.sacra.economyv2.database.DatabaseManager;
@@ -28,8 +29,14 @@ public final class SacraEconomyV2 extends JavaPlugin {
         }
 
         database = new DatabaseManager(this);
-        database.initialize();
-
+        try {
+            database.initialize();
+        } catch (SQLException e) {
+            getLogger().severe("データベースの初期化に失敗しました。プラグインを無効化します。");
+            e.printStackTrace();
+            getServer().getPluginManager().disablePlugin(this);
+            return;
+        }
         MessageManager messages = new MessageManager();
         ShopRepository shops = new ShopRepository(database);
         LandRepository lands = new LandRepository(database);
